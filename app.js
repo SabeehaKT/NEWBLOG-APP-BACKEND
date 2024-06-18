@@ -8,9 +8,12 @@ app.use(cors())
 app.use(express.json())
 
 app.post("/signup",(req,res)=>{
-    res.json({"status":"signedup"})
+    res.json({"status":"success"})
 })
 
+app.post("/login",(req,res)=>{
+    res.json({"status":"loggedin"})
+})
 
 app.listen(8080,()=>{
     console.log("server started")
